@@ -15,18 +15,32 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <div class="navigation"><input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-    <label for="navi-toggle" class="navigation__button">MENU</label></div>
-    <div class="navigation__background">&nbsp;</div>
-    <nav class="navigation__nav">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="3" class="navigation__link">About Natours</a></li>
-        <li class="navigation__item"><a href="3" class="navigation__link">Your benefits</a></li>
-        <li class="navigation__item"><a href="3" class="navigation__link">Popular tours</a></li>
-        <li class="navigation__item"><a href="3" class="navigation__link">Stories</a></li>
-        <li class="navigation__item"><a href="3" class="navigation__link">Book Now</a></li>
-      </ul>
-    </nav>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      <label for="navi-toggle" class="navigation__button">MENU</label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#section-about" class="navigation__link">About Natours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-features" class="navigation__link">
+              Your benefits
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-tours" class="navigation__link">Popular tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-stories" class="navigation__link">Stories</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#section-book" class="navigation__link">Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="./img/logo-white.png" alt="logo-white" class="header__logo" />
@@ -40,7 +54,7 @@
       </div>
     </header>
     <main>
-      <section class="section-about">
+      <section class="section-about" id="section-about">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Exciting tours for adventurous people
@@ -87,7 +101,7 @@
           </div>
         </div>
       </section>
-      <section class="section-features">
+      <section class="section-features" id="section-features">
         <div class="row">
           <div class="col-1-of-4">
             <div class="feature-box">
@@ -139,7 +153,7 @@
           </div>
         </div>
       </section>
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most Popular Tours</h2>
         </div>
@@ -239,7 +253,7 @@
           <a href="#" class="btn btn--green">Discover All Tours</a>
         </div>
       </section>
-      <section class="section-stories">
+      <section class="section-stories" id="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="./img/video.mp4" type="video/mp4" />
@@ -302,7 +316,7 @@
           </div>
         </div>
       </section>
-      <section class="section-book">
+      <section class="section-book" id="section-book">
         <div class="row">
           <div class="book">
             <div class="book__form">
@@ -381,21 +395,21 @@
         <div class="col-1-of-2">
           <div class="footer__navigation">
             <ul class="footer__list">
-              <li class="footer__item"
-                ><a href="#" class="footer__link">Company</a></li class="footer__item"
-              >
-              <li class="footer__item"
-                ><a href="#" class="footer__link">Contact us</a></li class="footer__item"
-              >
-              <li class="footer__item"
-                ><a href="#" class="footer__link">Careers</a></li class="footer__item"
-              >
-              <li class="footer__item"
-                ><a href="#" class="footer__link">Privacy Policy</a>
-              </li class="footer__item">
-              <li class="footer__item"
-                ><a href="#" class="footer__link">Terms</a></li class="footer__item"
-              >
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Careers</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy Policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
             </ul>
           </div>
         </div>
