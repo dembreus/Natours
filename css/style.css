@@ -116,11 +116,11 @@ body {
 }
 
 .u-margin-bottom-small {
-  margin-bottom: 1rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 .u-margin-bottom-medium {
-  margin-bottom: 6rem !important;
+  margin-bottom: 4rem !important;
 }
 
 .u-margin-bottom-big {
@@ -128,11 +128,11 @@ body {
 }
 
 .u-margin-top-small {
-  margin-top: 1rem !important;
+  margin-top: 1.5rem !important;
 }
 
 .u-margin-top-medium {
-  margin-top: 6rem !important;
+  margin-top: 4rem !important;
 }
 
 .u-margin-top-big {
@@ -487,6 +487,86 @@ body {
   opacity: 1;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(37, 37, 37, 0.8);
+  z-index: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  background-color: #efefef;
+  box-shadow: 0 2rem 4rem rgba(37, 37, 37, 0.2);
+  border-radius: 3px;
+  display: table;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: all 0.4s 0.2s;
+}
+.popup__left {
+  width: 33.3333%;
+  display: table-cell;
+}
+.popup__right {
+  width: 66.6667%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3rem 5rem;
+}
+.popup__img {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+}
+.popup__text {
+  font-size: 1.4rem;
+  margin-bottom: 4rem;
+  -moz-column-count: 2;
+  -moz-column-gap: 4rem;
+  -moz-column-rule: 1px solid #dddddd;
+  column-count: 2;
+  column-gap: 4rem;
+  column-rule: 1px solid #dddddd;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup:target .popup__content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+.popup__close:link, .popup__close:visited {
+  color: #777;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  line-height: 1;
+}
+.popup__close:hover {
+  color: #55c57a;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -523,7 +603,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, -50%);
   color: #efefef;
   text-transform: uppercase;
   font-size: 1.7rem;
