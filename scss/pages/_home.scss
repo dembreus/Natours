@@ -15,10 +15,19 @@
       rgba($color-primary-light, 0.7),
       rgba($color-primary-dark, 0.7)
     ),
-    url("../../img/nat-4.jpg");
+    url("../../img/nat-4-small.jpg");
   background-size: cover;
   margin-top: -10rem;
   transform: skewY(-7deg);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)
+      ),
+      url("../../img/nat-4.jpg");
+  }
 
   & > * {
     transform: skewY(7deg);
@@ -63,10 +72,19 @@
       rgba($color-white, 0.9) 50%,
       transparent 50%
     ),
-    url("../../img/nat-10.jpg");
+    url("../../img/nat-10-small.jpg");
   background-size: cover;
   border-radius: $border-radius;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @media (min-resolution: 192dpi), (min-width: 125em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 50%,
+        transparent 50%
+      ),
+      url("../../img/nat-10.jpg");
+  }
 
   @include respond(tab-land) {
     background-image: linear-gradient(
@@ -75,7 +93,17 @@
         rgba($color-white, 0.9) 65%,
         transparent 65%
       ),
-      url("../../img/nat-10.jpg");
+      url("../../img/nat-10-small.jpg");
+
+    @media (min-resolution: 192dpi) {
+      background-image: linear-gradient(
+          105deg,
+          rgba($color-white, 0.9) 0%,
+          rgba($color-white, 0.9) 65%,
+          transparent 65%
+        ),
+        url("../../img/nat-10.jpg");
+    }
   }
 
   @include respond(tab-port) {
