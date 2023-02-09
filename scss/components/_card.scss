@@ -12,10 +12,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden;
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    @supports (-webkit-backface-visibility: hidden) or
+      (backface-visibility: hidden) {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
 
     &--front {
       background-color: $color-white;
