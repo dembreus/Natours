@@ -4,13 +4,27 @@
   "description": "Natours home page.",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass --watch scss/main.scss css/style.css"
+    "sass:watch": "sass --watch scss/main.scss css/style.css",
+    "devserver": "lite-server",
+    "start": "npm-run-all --parallel devserver sass:watch",
+    "sass:compile": "sass scss/main.scss css/style.comp.css",
+    "css:concat": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "css:prefix": "postcss -u autoprefixer -b 'last 10 versions' css/style.concat.css -o css/style.prefix.css",
+    "css:compress": "sass css/style.prefix.css css/style.css -s compressed",
+    "css:build": "npm-run-all sass:compile css:concat css:prefix css:compress"
   },
   "repository": "https://github.com/dembreus/Natours.git",
   "author": "Dillon Embreus",
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "sass": "^1.56.2"
-  }
+    "autoprefixer": "^10.4.13",
+    "concat": "^1.0.3",
+    "lite-server": "^2.6.1",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.56.2",
+    "yarn-run-all": "^3.1.1"
+  },
+  "dependencies": {}
 }
